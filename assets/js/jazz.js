@@ -2,7 +2,6 @@ let title="jazz";
 let date="Oct 2024";
 let desc="in homage to Queen";
 $("title").text(`${title} by turbozambas`);
-$("h2").text(`${title}`);
 $("footer p").text(`${desc} - ${date}`);
 
 let canvasSize=600;

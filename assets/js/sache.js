@@ -2,7 +2,6 @@ let title="sache";
 let date="Feb 2025";
 let desc="a simple static pattern";
 $("title").text(`${title} by turbozambas`);
-$("h2").text(`${title}`);
 $("footer p").text(`${desc} - ${date}`);
 
 let canvasSize = 600;
