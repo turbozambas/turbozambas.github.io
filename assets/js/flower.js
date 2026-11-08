@@ -1,7 +1,9 @@
 let title="Flower Power";
 let date="Jan 2025";
+let desc="generative random flowers";
 $("title").text(`${title} by turbozambas`);
-$("h2").append(`${title} (${date})`);
+$("h2").text(`${title}`);
+$("footer p").text(`${desc} - ${date}`);
 
 let canvasSize = 800;
 let bgColor = '#ffe6ae';

@@ -1,7 +1,9 @@
 let title="concentric";
 let date="Dec 2024";
+let desc="generative random concentric circles";
 $("title").text(`${title} by turbozambas`);
-$("h2").append(`${title} (${date})`);
+$("h2").text(`${title}`);
+$("footer p").text(`${desc} - ${date}`);
 
 let circles = [];
 let maxAttempts = 2000;
