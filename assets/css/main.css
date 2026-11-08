@@ -1,8 +1,8 @@
 body {
-	font-family: "Pixelify Sans", sans-serif;
+	font-family: "Geist Pixel", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
 	font-style: normal;
+	font-variation-settings: "ELSH" 0;
 	font-size: 18px;
 	width: 100%;
 	margin: 0 auto;
@@ -17,9 +17,11 @@ header, footer {
 	width: 100%;
 	margin: 10px 5px 0;
 }
-header { font-size: 18px; }
-footer { font-size: 14px; }
-a { text-decoration:none; color:black; }
+
+a {
+	text-decoration:none;
+	color:black;
+}
 
 ul {
 	display: inline-flex;
