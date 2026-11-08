@@ -1,13 +1,5 @@
-@font-face {
-    font-family: 'Eight Bit Dragon';
-    src: url('vendor/fonts/EightBitDragon-anqx.ttf') format('ttf');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
-	font-family: 'Eight Bit Dragon';
+	font-family: 'Roboto', sans-serif;
 	width: 800px;
 	margin: 0 auto;
 	text-align: center;

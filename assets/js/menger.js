@@ -1,7 +1,10 @@
-// mENGERsPONGe
+let title="mENGERsPONGE";
+let date="Aug 2025";
+$("title").text(`${title} by turbozambas`);
+$("h2").append(`${title} (${date})`);
 
-let angle = 0;
-let sponge = [];
+let angle=0;
+let sponge=[];
 let backgroundColor="#306985";
 let colors=["#d0c280","#629036"];
 let canvasSide=800;
