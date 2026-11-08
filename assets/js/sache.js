@@ -5,7 +5,7 @@ $("title").text(`${title} by turbozambas`);
 $("h2").text(`${title}`);
 $("footer p").text(`${desc} - ${date}`);
 
-let canvasSize = 800;
+let canvasSize = 600;
 let gridSize = 8;
 let squareSize = canvasSize/gridSize;
 let colors = ['#4CAF50', '#F4C430', '#7E57C2'];

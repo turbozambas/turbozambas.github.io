@@ -9,7 +9,7 @@ let angle=0;
 let sponge=[];
 let backgroundColor="#306985";
 let colors=["#d0c280","#629036"];
-let canvasSide=800;
+let canvasSide=600;
 
 function randomColor() {
 	let c=colors[Math.floor(Math.random()*colors.length)]

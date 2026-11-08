@@ -5,7 +5,7 @@ $("title").text(`${title} by turbozambas`);
 $("h2").text(`${title}`);
 $("footer p").text(`${desc} - ${date}`);
 
-let canvasSize = 800;
+let canvasSize = 600;
 let bgColor = '#ffe6ae';
 let circles = [];
 let maxAttempts = 10000;

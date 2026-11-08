@@ -8,7 +8,7 @@ $("footer p").text(`${desc} - ${date}`);
 let circles = [];
 let maxAttempts = 2000;
 let buffer = 10;
-let canvasSize = 800;
+let canvasSize = 600;
  
 function setup() {
   createCanvas(canvasSize, canvasSize);
