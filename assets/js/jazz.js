@@ -5,8 +5,6 @@ $("title").text(`${title} by turbozambas`);
 $("footer p").text(`${desc} - ${date}`);
 
 let font;
-function preload() {
-}
 let canvasSize = 600;
 
 function setup() {
