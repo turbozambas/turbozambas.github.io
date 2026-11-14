@@ -4,7 +4,11 @@ let desc="in homage to Queen";
 $("title").text(`${title} by turbozambas`);
 $("footer p").text(`${desc} - ${date}`);
 
-let canvasSize=600;
+let ubuntu;
+function preload() {
+	ubuntu = loadFont("./lib/Ubuntu-Italic.ttf");
+}
+let canvasSize = 600;
 
 function setup() {
 	createCanvas(canvasSize, canvasSize);
