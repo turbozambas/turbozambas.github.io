@@ -4,9 +4,9 @@ let desc="in homage to Queen";
 $("title").text(`${title} by turbozambas`);
 $("footer p").text(`${desc} - ${date}`);
 
-let ubuntu;
+let dejavu;
 function preload() {
-	ubuntu = loadFont("vendor/fonts/Ubuntu-Italic.ttf");
+	dejavu = loadFont("vendor/fonts/DejaVuSansMono.ttf");
 }
 let canvasSize = 600;
 
