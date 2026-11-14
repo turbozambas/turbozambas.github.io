@@ -6,7 +6,7 @@ $("footer p").text(`${desc} - ${date}`);
 
 let ubuntu;
 function preload() {
-	ubuntu = loadFont("./lib/Ubuntu-Italic.ttf");
+	ubuntu = loadFont("vendor/fonts/Ubuntu-Italic.ttf");
 }
 let canvasSize = 600;
 
