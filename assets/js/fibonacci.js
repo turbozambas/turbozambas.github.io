@@ -13,11 +13,12 @@ let angle;
 let paused = false;
 let pauseStart = 0;
 let pauseDuration = 2000;
+let squares = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
+let black = "#000";
 
 function setup() {
 	createCanvas(canvasSize, canvasSize);
 	angle = 0; // set starting hypotenuse angle
-	//noLoop();
 }
 
 function fibonacci(n) { // Fib Sequence F(n)=F(n-1)+F(n-2))
@@ -77,7 +78,7 @@ function draw() {
 		if (millis() - pauseStart >= pauseDuration) paused = false;
 		else return;
 	}
-	angle += .5; // speed
+	angle += .75; // speed
 	if (angle % 90 === 0) {
 		paused = true;
 		pauseStart = millis();
