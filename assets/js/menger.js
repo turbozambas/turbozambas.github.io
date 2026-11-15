@@ -7,7 +7,7 @@ $("footer p").text(`${desc} - ${date}`);
 let angle=0;
 let sponge=[];
 let backgroundColor="#306985";
-let colors=["#d0c280","#629036"];
+let colors=["#F4D58D","#EEA47A","#D97B66","#E8E1D5","#A8C7B8","#8FB8C9","#B5A0C9","#E6AFC1"];
 let canvasSide=600;
 
 function randomColor() {
@@ -76,7 +76,7 @@ class Box {
 	show() {
 		push();
 		translate(this.pos.x, this.pos.y, this.pos.z);
-		box(this.size * 0.98);
+		box(this.size*0.98);
 		pop();
 	}
 }

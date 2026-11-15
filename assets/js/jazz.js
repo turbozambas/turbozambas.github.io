@@ -1,6 +1,6 @@
 let title="jazz";
 let date="Oct 2024";
-let desc="in homage to Queen";
+let desc="a tribute to Queen";
 $("title").text(`${title} by turbozambas`);
 $("footer p").text(`${desc} - ${date}`);
 
