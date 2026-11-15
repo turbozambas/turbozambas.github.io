@@ -32,3 +32,9 @@ li {
 	flex: 1;
 	margin: 0 5px;
 }
+
+@media (max-width: 600px) {
+    body {
+        transform: scale(calc(100vw / 600px);
+    }
+}

@@ -5,7 +5,7 @@ $("title").text(`${title} by turbozambas`);
 $("footer p").text(`${desc} - ${date}`);
 
 let canvasSize = 600;
-let drawingSize = canvasSize/2;
+let drawingSize = canvasSize*.618;
 let drawingBorder = (canvasSize - drawingSize) / 2;
 let drawingHypothenuse = Math.sqrt(drawingSize * drawingSize * 2);
 let controlPoints = [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]];
@@ -42,12 +42,13 @@ function drawSquares(f) {
 		let p3 = controlPoints[i + 1];
 		let p4 = getPoint(controlPoints[i][0], controlPoints[i][1], scaledSize[i], a +angle * i+90);
 		squares.push([[p1[0], p2[0], p3[0], p4[0]], [p1[1], p2[1], p3[1], p4[1]]]);
-		drawSquare(squares[i][0], squares[i][1]);
+		drawSquare(squares[i][0], squares[i][1],i);
 	}
 }
-function drawSquare(x, y) {
-	strokeWeight(.618);
-	noFill();
+function drawSquare(x, y, i) {
+	let colors=["#A94F38","#34746D","#526F91","#788044","#805477","#B87538","#45634B","#55504A"];
+	strokeWeight(1);
+	fill(colors[i]);
 	quad(x[0], y[0], x[1], y[1], x[2], y[2], x[3], y[3]);
 }
 
@@ -67,7 +68,6 @@ function calcControlPoints(f) {
 }
 
 function draw() {
-	background(255, 230, 174, 15); // translucent background
 	let bgColor = '#E8D9B5';
 	background(bgColor);
 	let fib = fibonacci(8).reverse(); // calculate fib sequence
