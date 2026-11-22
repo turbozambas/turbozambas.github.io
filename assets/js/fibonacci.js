@@ -5,20 +5,21 @@ $("title").text(`${title} by turbozambas`);
 $("footer p").text(`${desc} - ${date}`);
 
 let canvasSize = 600;
-let drawingSize = canvasSize*.618;
+let drawingSize = canvasSize*.618; // golden ratio itself, for the lulz
 let drawingBorder = (canvasSize - drawingSize) / 2;
-let drawingHypothenuse = Math.sqrt(drawingSize * drawingSize * 2);
-let controlPoints = [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]];
+let drawingHypotenuse = Math.sqrt(drawingSize * drawingSize * 2);
+let controlPoints = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
+let squares = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
 let angle;
 let paused = false;
 let pauseStart = 0;
 let pauseDuration = 2000;
-let squares = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
 let black = "#000";
 
 function setup() {
 	createCanvas(canvasSize, canvasSize);
-	angle = 0; // set starting hypotenuse angle
+	angle = 0; // set starting angle
+	//noLoop();
 }
 
 function fibonacci(n) { // Fib Sequence F(n)=F(n-1)+F(n-2))
@@ -41,7 +42,7 @@ function drawSquares(f) {
 		let p1 = controlPoints[i];
 		let p2 = getPoint(controlPoints[i][0], controlPoints[i][1], scaledSize[i], a + angle * i);
 		let p3 = controlPoints[i + 1];
-		let p4 = getPoint(controlPoints[i][0], controlPoints[i][1], scaledSize[i], a +angle * i+90);
+		let p4 = getPoint(controlPoints[i][0], controlPoints[i][1], scaledSize[i], a + angle * i + 90);
 		squares.push([[p1[0], p2[0], p3[0], p4[0]], [p1[1], p2[1], p3[1], p4[1]]]);
 		drawSquare(squares[i][0], squares[i][1],i);
 	}
@@ -54,16 +55,16 @@ function drawSquare(x, y, i) {
 }
 
 function calcControlPoints(f) {
-	// scale hypothnuses
+	// scale hypotenuses
 	let total = f.reduce((sum, n) => sum + n, 0);
-	let scaleFactorHypothenuse = drawingHypothenuse / total;
-	let scaledHypothnuses = f.map(n => n * scaleFactorHypothenuse);
+	let scaleFactorHypotenuse = drawingHypotenuse / total;
+	let scaledHypotenuses = f.map(n => n * scaleFactorHypotenuse);
 
 	controlPoints = Array.from({ length: 9 }, () => [drawingBorder, drawingBorder]);
 	for (let i = 0; i <= 8; i++) { // calculate controls points' coordinates
 		let a = 45;
-		if (i > 0) controlPoints[i + 1] = getPoint(controlPoints[i][0], controlPoints[i][1], scaledHypothnuses[i], a + angle * i);
-		else controlPoints[i + 1] = getPoint(controlPoints[i][0], controlPoints[i][1], scaledHypothnuses[i], a);
+		if (i > 0) controlPoints[i + 1] = getPoint(controlPoints[i][0], controlPoints[i][1], scaledHypotenuses[i], a + angle * i);
+		else controlPoints[i + 1] = getPoint(controlPoints[i][0], controlPoints[i][1], scaledHypotenuses[i], a);
 	}
 	controlPoints.pop();
 }
