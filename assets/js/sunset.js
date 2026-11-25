@@ -50,7 +50,7 @@ function draw() {
 
 	// draw the sky
 	for (var i=0; i < startY; i++) {
-		n = map(i,0,startY,0,1);
+		let n = map(i,0,startY,0,1);
 		let newc = lerpColor(skyColor[0],skyColor[1],n);
 		stroke(newc);
 		line(0,i,canvasSize,i);
